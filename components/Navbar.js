@@ -1,5 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 
 const links = [
@@ -13,6 +15,9 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  // detecta onde estou
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -49,19 +54,17 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <a href="#hero" style={{ textDecoration: 'none' }}>
+        <Link href="/" style={{ textDecoration: 'none' }}>
           <span
             style={{
               fontFamily: 'var(--font-display)',
               fontSize: '1.5rem',
-              fontWeight: 400,
               color: 'var(--text-primary)',
-              letterSpacing: '0.02em',
             }}
           >
             NKoten<span style={{ color: 'var(--accent)' }}>.</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div
@@ -69,13 +72,13 @@ export default function Navbar() {
           className="hide-mobile"
         >
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              // Se não estiver na home, o href vira "/#id"
+              href={isHome ? link.href : `/${link.href}`}
               style={{
                 fontFamily: 'var(--font-body)',
                 fontSize: '0.8rem',
-                fontWeight: 400,
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
                 color: 'var(--text-secondary)',
@@ -88,7 +91,7 @@ export default function Navbar() {
               }
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -138,16 +141,16 @@ export default function Navbar() {
           style={{
             background: 'var(--bg-card)',
             borderTop: '1px solid var(--border-subtle)',
-            padding: '1rem 2rem 1.5rem',
+            padding: '1rem 2rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
           }}
         >
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              href={isHome ? link.href : `/${link.href}`}
               onClick={() => setMenuOpen(false)}
               style={{
                 fontSize: '0.85rem',
@@ -158,7 +161,7 @@ export default function Navbar() {
               }}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}
