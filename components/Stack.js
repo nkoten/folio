@@ -19,6 +19,56 @@ function useInView(threshold = 0.1) {
 
 const stack = [
   {
+    category: 'Engenharia de Back-end & Dados',
+    items: [
+      {
+        name: 'Node.js & Express',
+        note: 'Arquitetura de APIs rápidas, seguras e prontas para alta escala.',
+      },
+      {
+        name: 'Bancos de Dados Relacionais',
+        note: 'Modelagem com PostgreSQL e MySQL focada em integridade e segurança.',
+      },
+      {
+        name: 'Integrações e Automações',
+        note: 'Conexão de sistemas via APIs RESTful, Webhooks e fluxos automatizados.',
+      },
+    ],
+  },
+  {
+    category: 'Interfaces & Aplicações',
+    items: [
+      {
+        name: 'Next.js & React',
+        note: 'Aplicações web modernas, otimizadas para motores de busca (SEO) e conversão.',
+      },
+      {
+        name: 'Tailwind CSS',
+        note: 'Desenho de interfaces limpas, responsivas (Mobile-First) e de alta fidelidade.',
+      },
+      {
+        name: 'TypeScript',
+        note: 'Garantia de código tipado, diminuindo bugs em produção drasticamente.',
+      },
+    ],
+  },
+  {
+    category: 'Infraestrutura & Operação',
+    items: [
+      {
+        name: 'Ambientes Linux & Docker',
+        note: 'Ambientes isolados e deploys previsíveis, minimizando quedas do sistema.',
+      },
+      {
+        name: 'Controle & Versionamento',
+        note: 'Gestão profissional de código com Git/GitHub, facilitando manutenção contínua.',
+      },
+    ],
+  },
+];
+
+const stackk = [
+  {
     category: 'Backend',
     items: [
       { name: 'Node.js', level: 90, note: 'Principal stack' },
@@ -86,7 +136,7 @@ function SkillBar({ name, level, note, inView, delay }) {
             {note}
           </span>
         </div>
-        <span
+        {/* <span
           style={{
             fontFamily: 'var(--font-mono)',
             fontSize: '0.7rem',
@@ -94,7 +144,7 @@ function SkillBar({ name, level, note, inView, delay }) {
           }}
         >
           {level}%
-        </span>
+        </span> */}
       </div>
       <div
         style={{

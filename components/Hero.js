@@ -7,16 +7,25 @@ const heroLabels = {
     up: 'Arquiteturas escaláveis e',
     bottom: 'interfaces de alta fidelidade.',
   },
-  l3: { up: 'Sistemas robustos.', bottom: 'Interfaces premium.' },
+  l3: {
+    up: 'Sistemas robustos.',
+    bottom: 'Interfaces premium.',
+    text: `Especialista em transformar complexidade técnica em produtos fluidos. Do back-end robusto ao pixel perfect, meu compromisso é com a performance real.`,
+  },
+  l4: {
+    up: 'Sistemas Inteligentes.',
+    bottom: 'Eficiência Operacional.',
+    text: `Engenheiro de Software e especialista em automação de processos. Desenvolvo dashboards sob medida, integrações de IA e sistemas robustos de back-end que reduzem custos operacionais e aceleram o fechamento de negócios para PMEs.`,
+  },
 };
 
 export default function Hero() {
   const [visible, setVisible] = useState(false);
   const data = {
     hero: {
-      labelTop: heroLabels.l3.up,
-      labelBottom: heroLabels.l3.bottom,
-      text: `Especialista em transformar complexidade técnica em produtos fluidos. Do back-end robusto ao pixel perfect, meu compromisso é com a performance real.`,
+      labelTop: heroLabels.l4.up,
+      labelBottom: heroLabels.l4.bottom,
+      text: heroLabels.l4.text,
     },
   };
 
@@ -106,7 +115,7 @@ export default function Hero() {
           <h1
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(3rem, 7vw, 7.5rem)',
+              fontSize: 'clamp(3rem, 7vw, 7rem)',
               fontWeight: 300,
               lineHeight: 1.05,
               color: 'var(--text-primary)',
@@ -118,7 +127,7 @@ export default function Hero() {
           <h1
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(3rem, 7vw, 7.5rem)',
+              fontSize: 'clamp(3rem, 7vw, 7rem)',
               fontWeight: 400,
               fontStyle: 'italic',
               lineHeight: 1.05,

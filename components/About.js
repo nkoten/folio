@@ -111,7 +111,7 @@ export default function About() {
               transition: 'all 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s',
             }}
           >
-            <p
+            {/*<p
               style={{
                 fontSize: '1rem',
                 color: 'var(--text-secondary)',
@@ -131,7 +131,25 @@ export default function About() {
               pela Estácio. Minha relação com a tecnologia vai além do
               profissional — é uma paixão genuína que começou muito antes de se
               tornar carreira.
-            </p>
+            </p>*/}
+            {
+              <p
+                style={{
+                  fontSize: '1rem',
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.9,
+                  marginBottom: '1.5rem',
+                  fontWeight: 300,
+                }}
+              >
+                Minha trajetória combina uma sólida bagagem prática no setor de
+                infraestrutura técnica e execução de projetos complexos com a
+                Engenharia de Software. Essa fusão me dá uma visão única de
+                mercado: não enxergo apenas linhas de código, enxergo a
+                engenharia de custos, fluxos de trabalho e a viabilidade
+                financeira por trás de cada sistema.
+              </p>
+            }
             <p
               style={{
                 fontSize: '1rem',
