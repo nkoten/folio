@@ -1,21 +1,22 @@
-/*
+/* --- data/projects.js
  */
 export const projects = [
   {
-    id: 'projeto-alpha',
+    id: 'nk-ui-react',
     num: '01',
-    title: 'Projeto Alpha',
-    subtitle: 'API REST completa',
+    title: 'nk-ui-react',
+    subtitle: 'Ecossistema CLI de Módulos Core',
     description:
-      'Uma API robusta construída com Node.js e Express, com autenticação JWT e controle de permissões.',
+      'Uma biblioteca e ferramenta CLI automatizada que injeta componentes web estruturais inspirados na API nativa do React Native diretamente no código-fonte do usuário.',
     fullDescription:
-      'Aqui vai o texto longo para a página de detalhes... Explicando desafios técnicos e soluções de arquitetura.',
-    tags: ['Node.js', 'Express', 'PostgreSQL', 'JWT'],
-    year: '2024',
-    status: 'Produção',
+      'O nk-ui-react foi desenvolvido sob uma filosofia de total autonomia para o desenvolvedor (estilo shadcn/ui). Através de uma CLI interativa e fluida construída com @clack/prompts, o sistema avalia o ambiente do cliente e realiza o transpile dinâmico dos componentes para TypeScript (.tsx) ou JavaScript (.jsx). O pacote inclui um módulo avançado de streaming de vídeo acoplado à API industrial do Video.js, configurado nativamente com propriedades reativas e suporte completo a layouts baseados em Tailwind CSS.',
+    tags: ['Node.js', 'React', 'CLI', 'Tailwind', 'Video.js', 'TypeScript'],
+    year: '2026',
+    status: 'Open Source',
     featured: true,
-    image:
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop', // Imagem horizontal
+    image: '/folio/nk-ui-react_shots_so.png',
+    linkDeploy: 'https://nkoten.github.io/nk-ui-react',
+    linkGithub: 'https://github.com/nkoten/nk-ui-react',
   },
   {
     id: 'projeto-beta',

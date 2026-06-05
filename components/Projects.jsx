@@ -1,3 +1,4 @@
+// components/Projects.jsx
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { projects } from '@/data/projects';
